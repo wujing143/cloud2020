@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.mapper;
 
 import com.atguigu.springcloud.entities.payment.Payment;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @ClassName: PaymentMapper

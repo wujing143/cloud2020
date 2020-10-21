@@ -1,7 +1,5 @@
 package com.atguigu.springcloud.entities.payment;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,12 +20,12 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor   //全参
 @NoArgsConstructor    //空参
-@Api("参数类")
+//@Api("参数类")
 public class Payment implements Serializable {
 
-    @ApiModelProperty("id")
+//    @ApiModelProperty("id")
     private Long id;
-    @ApiModelProperty("序号")
+//    @ApiModelProperty("序号")
     private String serial;
 
 }
