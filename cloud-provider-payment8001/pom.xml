@@ -80,6 +80,13 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!-- eureka-client 客户端  引入-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
     </dependencies>
 
 
