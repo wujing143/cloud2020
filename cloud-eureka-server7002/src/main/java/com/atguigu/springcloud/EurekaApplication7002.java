@@ -12,8 +12,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @EnableEurekaServer   //表示 7002这个服务 就是注册中心 ，我来管理配置、登记、注册
 @SpringBootApplication
-public class EurekaApplication {
+public class EurekaApplication7002 {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class, args);
+        SpringApplication.run(EurekaApplication7002.class, args);
     }
 }

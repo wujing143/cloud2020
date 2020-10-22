@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -31,6 +32,8 @@ public class PaymentController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    @Value("${server.port}")   //去 application.yml 取值端口号
+    private String serverPort;
 
 
     @PostMapping("/addPayment")
@@ -40,7 +43,7 @@ public class PaymentController {
         log.info("******插入结果："+result);
 
         if(result>0){
-            return new CommonResult("200","插入成功！",result);
+            return new CommonResult("200","插入成功！serverPort："+serverPort,result);
         }else{
             return new CommonResult("444","插入失败！",null);
         }
@@ -53,7 +56,7 @@ public class PaymentController {
         log.info("******查询结果："+payment);
 
         if(payment!=null){
-            return new CommonResult("200","查询成功！",payment);
+            return new CommonResult("200","查询成功！serverPort："+serverPort,payment);
         }else{
             return new CommonResult("444","查询失败！",null);
         }

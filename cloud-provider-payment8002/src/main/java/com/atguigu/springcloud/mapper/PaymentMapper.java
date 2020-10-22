@@ -8,7 +8,6 @@ import com.atguigu.springcloud.entities.payment.Payment;
  * @Date: 2020/10/20 14:23
  * @Version: 1.0
  */
-
 public interface PaymentMapper {
 
       int  insert(Payment payment);
