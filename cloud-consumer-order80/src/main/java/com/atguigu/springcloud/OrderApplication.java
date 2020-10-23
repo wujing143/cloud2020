@@ -1,8 +1,10 @@
 package com.atguigu.springcloud;
 
+import com.atguigu.myrule.MySelfRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import sun.applet.Main;
 
 /**
@@ -14,6 +16,7 @@ import sun.applet.Main;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MySelfRule.class)// [替换默认的轮询负载均衡] MySelfRule.class
 public class OrderApplication {
     public static void main(String[] args) {
         SpringApplication.run(OrderApplication.class, args);
