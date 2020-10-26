@@ -3,6 +3,7 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.entities.common.CommonResult;
 import com.atguigu.springcloud.entities.payment.Payment;
 import com.atguigu.springcloud.service.PaymentService;
+import com.atguigu.springcloud.service.impl.PaymentServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -46,7 +47,9 @@ public class PaymentController {
     @PostMapping("/addPayment")
     @ApiOperation("添加")
     public CommonResult addPayment(@RequestBody Payment payment){
-        int result = paymentService.insert(payment);
+
+        paymentService.insert(payment);
+        int result = this.paymentService.insert(payment);
         log.info("******插入结果："+result);
 
         if(result>0){
