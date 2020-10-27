@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  */
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients    //开启 Feigen，{IPC接口}
 public class OrderHystrixAppliaction80 {
     public static void main(String[] args) {
         SpringApplication.run(OrderHystrixAppliaction80.class, args);

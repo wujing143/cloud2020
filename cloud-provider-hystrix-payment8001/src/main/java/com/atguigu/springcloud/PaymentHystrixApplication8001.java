@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Version: 1.0
  */
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient      //注册到Eureka服务中心
 @EnableCircuitBreaker  //开启 8001 fallback 服务降级
 public class PaymentHystrixApplication8001 {
     public static void main(String[] args) {
