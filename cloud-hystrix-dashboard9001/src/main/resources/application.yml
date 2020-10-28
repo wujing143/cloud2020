@@ -1,0 +1,2 @@
+server:
+  port: 9002     #9001被 System 占用，结束不了
