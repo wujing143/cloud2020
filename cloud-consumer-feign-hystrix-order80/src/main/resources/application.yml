@@ -13,18 +13,3 @@ feign:
   hystrix:
     enabled:  true    #如果处理自身的容错就开启。开启方式与生产端不一样。
 
-
-##hystrix的超时时间
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        timeout:
-#          enabled: true        #开启 hystrix 时间检测功能
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 5000   #hystrix的超时时间
-##ribbon的超时时间
-#ribbon:
-#  ReadTimeout: 3000
-#  ConnectTimeout: 3000

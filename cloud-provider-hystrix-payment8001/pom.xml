@@ -35,7 +35,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!--与starter-web 标配 ，Htpp查看 用于运行监测的，这里的运行监测 ，使用 Hystrix实现      -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

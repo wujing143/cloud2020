@@ -15,17 +15,17 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2020/10/26 17:43
  * @Version: 1.0
  */
-@Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
-public interface OrderHystrixService {
-
-    @ApiOperation("成功OK")
-    @GetMapping("/payment/hystrix/ok/{id}")
-    public String paymentInfo_OK(@PathVariable("id") Integer id);
-
-    @ApiOperation("超时3秒")
-    @GetMapping("/payment/hystrix/timeout/{id}")
-    public String paymentInfo_TimeOut(@PathVariable("id") Integer id);
-
-}
+//@Component
+//@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+//public interface OrderHystrixService {
+//
+//    @ApiOperation("成功OK")
+//    @GetMapping("/payment/hystrix/ok/{id}")
+//    public String paymentInfo_OK(@PathVariable("id") Integer id);
+//
+//    @ApiOperation("超时3秒")
+//    @GetMapping("/payment/hystrix/timeout/{id}")
+//    public String paymentInfo_TimeOut(@PathVariable("id") Integer id);
+//
+//}
 

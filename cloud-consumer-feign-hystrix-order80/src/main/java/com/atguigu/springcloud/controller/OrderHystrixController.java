@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.controller;
 
-import com.atguigu.springcloud.service.OrderHystrixService;
+import com.atguigu.springcloud.rpc.service.RpcHystrixPaymentService;
+//import com.atguigu.springcloud.service.OrderHystrixService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
@@ -21,15 +22,18 @@ import javax.annotation.Resource;
 @Slf4j
 public class OrderHystrixController {
 
+//    @Resource
+//    private OrderHystrixService orderHystrixService;
     @Resource
-    private OrderHystrixService orderHystrixService;
+    private RpcHystrixPaymentService rpcHystrixPaymentService;
 
     @Value("${server.port}")
     private String serverPort;
 
     @GetMapping("/haha/ok/{id}")
     public String paymentInfo_OK(@PathVariable("id") Integer id){
-        String result = orderHystrixService.paymentInfo_OK(id);
+//        String result = orderHystrixService.paymentInfo_OK(id);
+        String result = rpcHystrixPaymentService.paymentInfo_OK(id);
         return result;
     }
     @GetMapping("/haha/timeout/{id}")
@@ -38,7 +42,9 @@ public class OrderHystrixController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")  //1.5秒钟以内就是正常的业务逻辑
     })
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id){
-        String result = orderHystrixService.paymentInfo_TimeOut(id);
+       // int age =10/0;
+//        String result = orderHystrixService.paymentInfo_TimeOut(id);
+        String result = rpcHystrixPaymentService.paymentInfo_TimeOut(id);
         return result;
     }
 
@@ -46,5 +52,20 @@ public class OrderHystrixController {
     public String paymentInfoTimeOutHandler(@PathVariable("id")Integer id){
         return "我是消费者80,对方支付系统繁忙，请稍后再试，或者自己运行出错，请检查自己~~~";
     }
+
+
+    /**
+     * openFegin 实现RPC接口调用
+     * @param id
+     * @return
+     */
+    @GetMapping("/haha/UUID/{id}")
+    public String paymentUUID(@PathVariable("id") Integer id){
+        String str = rpcHystrixPaymentService.paymentUUID(id);
+        return str;
+    }
+
+
+
 
 }

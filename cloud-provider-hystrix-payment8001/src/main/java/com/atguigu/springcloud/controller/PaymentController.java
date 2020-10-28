@@ -1,5 +1,6 @@
 package com.atguigu.springcloud.controller;
 
+import cn.hutool.core.util.IdUtil;
 import com.atguigu.springcloud.service.PaymentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -43,6 +44,26 @@ public class PaymentController {
         log.info("*******result:"+result);
         return result;
     }
+
+    @GetMapping("/payment/hystrix/uuid/{id}")
+    @ApiOperation("生产UUID")
+    public String paymentUUID(@PathVariable("id") Integer id){
+        String simpleUUID = IdUtil.simpleUUID();
+        log.info("*******result:"+simpleUUID);
+        return "id:"+id+"====="+simpleUUID;
+    }
+
+
+    @GetMapping("/payment/circuit/{id}")
+    @ApiOperation("服务熔断,正数正常，负数异常")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id){
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("*******result:"+result);
+        return result;
+    }
+
+
+
 
 
 }
