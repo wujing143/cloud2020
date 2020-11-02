@@ -1,9 +1,5 @@
-
-#  application.yml  用户级     bookstrap.yml 系统级 【优先级更高】
-#  先读取 bookstrap.yml，再读取 application.yml 。
-
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -13,7 +9,6 @@ spring:
       label: main   # 分支名称
       name: config  #配置文件的服务名
       profile: dev   #配置文件的后缀
-#      profile: test
       #  main分支上的  config-dev.yml 的配置文件
       uri: http://localhost:3344  #配置中心地址
       # 读取 http://localhost:3344/main/config-dev.yml
@@ -30,12 +25,11 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka
 
 
-#暴露监控端点
 management:
-  endpoints:  #暴露bus刷新配置的端点
+  endpoints:
     web:
       exposure:
-        include: 'bus-refresh'  # C:\Users\PC>curl -X POST "http://localhost:3344/actuator/bus-refresh"
+        include: '*'
 
 
 
