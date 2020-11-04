@@ -21,7 +21,7 @@ spring:
           destination: studyExchange # 表示要使用的Exchange名称定义
           content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
           binder: defaultRabbit # 设置要绑定的消息服务的具体设置
-          group: atguiguA   #分组 解决重复消费问题
+          group: atguiguA    #分组 解决重复消费问题   【同一个组的多个微服务实例，每次只会有一个拿到】
 
 eureka:
   client: # 客户端进行Eureka注册的配置
