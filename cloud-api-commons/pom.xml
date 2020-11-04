@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <optional>true</optional>   <!--表示依赖不传递-->
         </dependency>
 
         <!--新增hystrix-->
