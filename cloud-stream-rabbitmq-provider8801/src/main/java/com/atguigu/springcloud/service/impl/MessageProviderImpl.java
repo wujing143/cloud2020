@@ -22,7 +22,7 @@ import java.util.function.LongFunction;
  * @Version: 1.0
  */
 @Slf4j
-@EnableBinding(Source.class) //定义消息的推送管道
+@EnableBinding(Source.class) //【定义消息的推送管道】 指信道channel 和 交换exchange 绑定在一起
 public class MessageProviderImpl implements IMessageProvider
 {
     @Resource

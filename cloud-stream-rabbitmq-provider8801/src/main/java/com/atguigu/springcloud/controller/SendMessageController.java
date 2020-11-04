@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @Version: 1.0
  */
 @RestController
-@Api(description="Spring Cloud Stream")
+@Api(description="Spring Cloud Stream 生产者")
 public class SendMessageController {
     @Resource
     private IMessageProvider messageProvider;
