@@ -17,8 +17,8 @@ import sun.applet.Main;
 @SpringBootApplication
 @EnableEurekaClient
 @RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MySelfRule.class)// [替换默认的轮询负载均衡] MySelfRule.class
-public class OrderApplication {
+public class OrderApplication80 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderApplication80.class, args);
     }
 }

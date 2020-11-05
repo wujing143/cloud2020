@@ -13,6 +13,8 @@
 
 
     <dependencies>
+
+
         <!--新增hystrix,熔断限流-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

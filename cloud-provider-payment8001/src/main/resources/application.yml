@@ -5,6 +5,11 @@ server:
 spring:
   application:
     name: cloud-payment-service   # 这个名称就是 Eureka 服务注册中心的“CLOUD-PAYMENT-SERVICE”一致
+  zipkin:
+    base-url: http://localhost:9411   #监控追踪数据 打印到 http://localhost:9411
+    sleuth:
+      sampler:
+      probability: 1  #采样率 [0,1] ,1则表示全部采集
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #当前数据库源操作类型
     driver-class-name: com.mysql.jdbc.Driver    #mysql驱动包

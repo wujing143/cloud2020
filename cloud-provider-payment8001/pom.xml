@@ -13,6 +13,13 @@
 
 
     <dependencies>
+        <!--包含了sleuth+zipkin ；Sleuth分布式请求链路追踪 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
+
         <!-- 引入自己定义的api通用包，先maven命令clean ->install   ,再引入此包    -->
         <dependency>
             <groupId>com.atguigu.springcloud</groupId>
