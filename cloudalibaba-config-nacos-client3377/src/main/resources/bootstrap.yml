@@ -1,0 +1,32 @@
+server:
+  port: 3377   #本服务端口号
+
+spring:
+  application:
+    name: nacos-config-client   #本服务名称
+#  profiles: 【写在application.yml中】
+#    active: dev    # 后缀-dev  开发环境
+  cloud:
+    nacos:
+      discovery: #【注册】
+        server-addr: localhost:8848 #服务注册中心地址
+      config: #【配置】
+        server-addr: localhost:8848 #配置中心地址
+        file-extension: yaml #去读取 yaml格式的文件
+#        namespace: c5a3c143-bdc2-4265-9e6e-6373eec8da0b
+#        namespace: cd3ed8c0-9272-48b9-852e-ebef0524e458
+#        group: SpringCloud    #组
+
+
+#***重点
+#  ${prefix}-${spring.profiles.active}.${file-extension}
+#   服务名称 - 环境代号 . 文件格式
+#  nacos-config-client-dev.yaml
+
+
+#【分类配置】
+# 1.DataID方案：  active: dev  / active: test
+# 2.Group方案：  group: DEFAULT_GROUP[默认]  /   group: WU
+# 3.Namespace方案： 命名空间
+          #  c5a3c143-bdc2-4265-9e6e-6373eec8da0b
+          #  cd3ed8c0-9272-48b9-852e-ebef0524e458
