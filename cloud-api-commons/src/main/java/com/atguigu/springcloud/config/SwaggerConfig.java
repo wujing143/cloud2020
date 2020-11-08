@@ -26,7 +26,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                //swagger匹配的controller  (可多个路径)
+                //swagger匹配的controller  (可多个路径)  表明这个路径下的类都是Swagger注明类
                 .apis(RequestHandlerSelectors.basePackage("com.atguigu.springcloud.controller"))
                 .paths(PathSelectors.any())
                 .build();

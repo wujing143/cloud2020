@@ -16,7 +16,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 
 @SpringBootApplication
-@EnableDiscoveryClient      //该注解用于：Consul 或者 Zookeeper 作为服务注册中心时注册 客户端服务
 @EnableEurekaClient    //Enable 客户端
 @MapperScan(value = "com.atguigu.springcloud.mapper")
 public class PaymentApplication8001 {
