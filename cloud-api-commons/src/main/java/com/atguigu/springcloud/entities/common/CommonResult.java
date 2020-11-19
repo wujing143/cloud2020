@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
  * @date 2020/10/20 11:04
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor   //全参构造
+@NoArgsConstructor    //无参构造
 public class CommonResult<T> {
 
 

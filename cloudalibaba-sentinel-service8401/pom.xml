@@ -12,6 +12,7 @@
     <artifactId>cloudalibaba-sentinel-service8401</artifactId>
 
     <dependencies>
+        <!--使用Payment支付Entity-->
         <dependency>
             <groupId>com.atguigu.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
