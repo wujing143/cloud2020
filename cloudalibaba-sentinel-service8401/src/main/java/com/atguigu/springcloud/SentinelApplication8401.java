@@ -28,7 +28,18 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
          * 2.异常比例 ：资源的每秒请求量 >= 5(默认)，并且每秒异常数占通过量的比值超过阈值试，进入降级。异常比例的阈值范围【0.0,1.0】，代表0%-100%
          * 3.异常数 ： 当资源近1分钟的异常数超过阈值之后，熔断降级。【时间窗口一定要大于等于60s，不然溶度状态后，任然可能处在熔断状态下】
  *
- * 三：热点key限流
+ * 三：热点key限流：  ****【同一个接口，根据请求的参数的不同，实现限流操作】
+         * 1. @SentinelResource(value = "testHotKey",blockHandler = "deal_testHotKey")
+         * 2.参数额外项：
+         *            参数类型 、参数值，限流阈值， 如： 设置 p1=C 阈值200  ===> 参数p1不等于C 是阈值就是1
+         *            参数类型： 基本类型/String
+ *
+ * 四：系统规则： 对整个微服务，做一些入口级别的规定
+          * 【阈值类型：  LOAD  、  PT  、 线程数  、 入口QPS  、 CPU使用率】
+ *
+ *
+ *
+ *
  *
  * @Date: 2020/11/17 10:40
  * @Version: 1.0
