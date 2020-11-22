@@ -1,0 +1,5 @@
+E:\MyProject\Java\cloud2020\cloud-api-commons\src\main\java\com\atguigu\springcloud\rpc\service\RpcHystrixPaymentService.java
+E:\MyProject\Java\cloud2020\cloud-api-commons\src\main\java\com\atguigu\springcloud\rpc\service\fallback\RpcHystrixPaymentServiceHystrix.java
+E:\MyProject\Java\cloud2020\cloud-api-commons\src\main\java\com\atguigu\springcloud\config\SwaggerConfig.java
+E:\MyProject\Java\cloud2020\cloud-api-commons\src\main\java\com\atguigu\springcloud\entities\common\CommonResult.java
+E:\MyProject\Java\cloud2020\cloud-api-commons\src\main\java\com\atguigu\springcloud\entities\payment\Payment.java

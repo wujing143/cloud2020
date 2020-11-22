@@ -1,0 +1,5 @@
+com\atguigu\springcloud\entities\payment\Payment.class
+com\atguigu\springcloud\config\SwaggerConfig.class
+com\atguigu\springcloud\rpc\service\RpcHystrixPaymentService.class
+com\atguigu\springcloud\entities\common\CommonResult.class
+com\atguigu\springcloud\rpc\service\fallback\RpcHystrixPaymentServiceHystrix.class
