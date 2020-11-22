@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients    //openfeign 开启
 public class OrderNacosMain84
 {
     public static void main(String[] args) {
