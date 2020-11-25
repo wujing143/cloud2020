@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Date: 2020/11/23 21:45
  */
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.atguigu.springcloud.controller"})
 @MapperScan(value = "com.atguigu.springcloud.mapper")
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//取消数据源自动创建的配置
 public class SeataStorageApplication2002 {

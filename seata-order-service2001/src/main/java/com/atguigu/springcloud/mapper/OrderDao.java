@@ -9,8 +9,7 @@ import org.apache.ibatis.annotations.Param;
  * @Author: Wu
  * @Date: 2020/11/23 21:16
  */
-public interface OrderDao
-{
+public interface OrderDao {
     //新建订单
     void create(Order order);
 

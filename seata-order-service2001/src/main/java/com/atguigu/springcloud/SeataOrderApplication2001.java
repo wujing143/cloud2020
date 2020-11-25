@@ -16,7 +16,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 @MapperScan(value = "com.atguigu.springcloud.mapper")
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//取消数据源自动创建的配置
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//取消数据源自动创建的配置
+@SpringBootApplication
 public class SeataOrderApplication2001{
 
     public static void main(String[] args) {
