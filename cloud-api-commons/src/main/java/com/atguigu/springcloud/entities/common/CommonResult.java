@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @AllArgsConstructor   //全参构造
-@NoArgsConstructor    //无参构造
+@NoArgsConstructor   //无参构造
 public class CommonResult<T> {
 
 
@@ -20,11 +20,9 @@ public class CommonResult<T> {
     private String message;
     private T data;
 
-
     public CommonResult(String code, String message) {
-       this (code,message,null);
+        this (code,message,null);
     }
-
 
 
 }
