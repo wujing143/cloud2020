@@ -14,5 +14,5 @@ public interface OrderDao {
     void create(Order order);
 
     //修改订单状态，从零改为1
-    void update(@Param("userId") Long userId, @Param("status") Integer status);
+    void update(@Param("orderId") Long orderId);
 }

@@ -6,6 +6,7 @@ import com.atguigu.springcloud.service.OrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,7 @@ public class OrderController{
 
 
     @ApiOperation("创建订单")
-    @GetMapping("/order/create")
+    @PostMapping("/order/create")
     public CommonResult create(@RequestBody Order order)
     {
         orderService.create(order);

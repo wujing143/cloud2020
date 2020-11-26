@@ -5,6 +5,7 @@ import com.atguigu.springcloud.rpc.service.fallback.RpcHystrixPaymentServiceHyst
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,7 +23,7 @@ import java.math.BigDecimal;
         fallback = RpcHystrixPaymentServiceHystrix.class)
 public interface RpcHystrixAccountService {
 
-    @RequestMapping("/account/decrease")
+    @GetMapping("/account/decrease")
     @ApiOperation("扣减账户余额")
     public CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 

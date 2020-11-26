@@ -5,7 +5,9 @@ import com.atguigu.springcloud.rpc.service.fallback.RpcHystrixPaymentServiceHyst
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Description:
@@ -18,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
         fallback = RpcHystrixPaymentServiceHystrix.class)
 public interface RpcHystrixStorageService {
 
-    @RequestMapping("/storage/decrease")
+    @GetMapping("/storage/decrease")
     @ApiOperation("扣减库存")
-    public CommonResult decrease(Long productId, Integer count);
+    public CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count")Integer count);
 
 }
